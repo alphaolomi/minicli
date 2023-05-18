@@ -1,23 +1,29 @@
 {
-  "name": "minicli/application",
-  "description": "Minicli Application Template",
+  "name": "alphaolomi/minicli",
+  "description": "Minicli Application Template powered with Termwind and Plates",
   "license": "MIT",
-  "homepage": "https://github.com/minicli/application",
-  "keywords": ["cli","command-line", "template"],
+  "homepage": "https://github.com/alphaolomi/minicli",
+  "keywords": ["cli","command-line", "template", "termwind", "plates", "minicli"],
   "autoload": {
     "psr-4": {
       "App\\": "app/"
     }
   },
+  "bin" : ["minicli"],
   "require": {
+    "php": "^8.1",
     "minicli/minicli": "^3.0",
-    "minicli/command-help": "^0.1.0"
+    "minicli/command-help": "^0.1.0",
+    "nunomaduro/termwind": "^1.15",
+    "league/plates": "^3.5"
   },
   "require-dev": {
-    "pestphp/pest": "^1.21"
+    "pestphp/pest": "^1.21",
+    "laravel/pint": "^1.10"
   },
   "scripts": {
-    "test" : ["pest"]
+    "test" : ["pest"],
+    "lint" : ["pint"]
   },
   "config": {
     "allow-plugins": {

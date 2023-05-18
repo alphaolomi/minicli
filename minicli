@@ -5,8 +5,23 @@ if (php_sapi_name() !== 'cli') {
     exit;
 }
 
+
+$root_app = dirname(__DIR__);
+
+if (!is_file($root_app . '/vendor/autoload.php')) {
+    $root_app = dirname(__DIR__, 4);
+}
+
+if (is_file($root_app . '/vendor/autoload.php')) {
+    require $root_app . '/vendor/autoload.php';
+}
+
 require __DIR__ . '/vendor/autoload.php';
 
+use App\Config\AppConfig;
+use App\Config\TermwindOutputHandler;
+use App\Services\PlatesService;
+use App\Services\TermwindService;
 use Minicli\App;
 use Minicli\Exception\CommandNotFoundException;
 
@@ -15,8 +30,35 @@ $app = new App([
         __DIR__ . '/app/Command',
         '@minicli/command-help'
     ],
-    'debug' => true
+    'debug' => false
 ]);
+
+// Register Termwind Service
+$app->addService('termwind', new TermwindService());
+
+// Register Plates Service
+$app->addService('plates', new PlatesService());
+
+// Register Termwind Output Handler
+$app->setOutputHandler(new TermwindOutputHandler());
+
+/* Add configs using env vars and json files */
+try {
+    $config = (new AppConfig)->load();
+    foreach ($config as $key => $value) {
+        $app->config->{$key} = $value;
+    }
+    if ($app->config->debug) {
+        $app->getPrinter()->log("Debug mode is ON.");
+        $app->getPrinter()->log("Config loaded.");
+    }
+} catch (Exception $exception) {
+    if ($app->config->debug) {
+        $app->getPrinter()->error("An error occurred:");
+        $app->getPrinter()->error($exception->getMessage());
+    }
+    return 1;
+}
 
 try {
     $app->runCommand($argv);
