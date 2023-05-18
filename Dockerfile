@@ -1,8 +1,14 @@
 FROM php:8.2-cli-alpine
 
 # Metadata
-LABEL maintainer="Alpha Olomi <hello@alphaolomi.com>"
-LABEL description="Minicli template app Docker image"
+# title
+LABEL org.opencontainers.image.title "Minicli App"
+LABEL org.opencontainers.image.description "A simple CLI app built with Minicli"
+LABEL org.opencontainers.image.authors="hello@alphaolomi.com"
+LABEL org.opencontainers.image.documentation="https://alphaolomi.github.io/minicli"
+LABEL org.opencontainers.image.source="https://github.com/alphaolomi/minicli"
+LABEL org.opencontainers.image.vendor="Alpha Olomi"
+LABEL org.opencontainers.image.licenses="MIT"
 
 
 ARG user=sammy
