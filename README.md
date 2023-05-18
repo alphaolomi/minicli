@@ -6,6 +6,7 @@
     </p>
 </div>
 
+[![Tests](https://github.com/alphaolomi/minicli/actions/workflows/tests.yml/badge.svg)](https://github.com/alphaolomi/minicli/actions/workflows/tests.yml)      [![Docker](https://github.com/alphaolomi/minicli/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/alphaolomi/minicli/actions/workflows/docker-publish.yml)       [![pages-build-deployment](https://github.com/alphaolomi/minicli/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/alphaolomi/minicli/actions/workflows/pages/pages-build-deployment)   [![Image Size](https://ghcr-badge.egpl.dev/alphaolomi/minicli/size)](https://github.com/alphaolomi/minicli/pkgs/container/minicli)
 This repository is an application template for building command-line applications in PHP with [Minicli](https://github.com/minicli/minicli), [Termwind](https://github.com/nunomaduro/termwind) and [Plates](https://github.com/thephpleague/plates). 
 
 Please check [the official documentation](https://docs.minicli.dev) for more information on how to use this application template.
