@@ -2,8 +2,16 @@
   "name": "alphaolomi/minicli",
   "description": "Minicli Application Template powered with Termwind and Plates",
   "license": "MIT",
-  "homepage": "https://github.com/alphaolomi/minicli",
+  "type": "project",
+  "homepage": "https://alphaolomi.github.io/minicli/",
   "keywords": ["cli","command-line", "template", "termwind", "plates", "minicli"],
+  "authors": [
+    {
+        "name": "Alpha Olomi",
+        "email": "hello@alphaolomi.com",
+        "role": "Developer"
+    }
+],
   "autoload": {
     "psr-4": {
       "App\\": "app/"
@@ -25,7 +33,9 @@
     "test" : ["pest"],
     "lint" : ["pint"]
   },
+  "prefer-stable": true,
   "config": {
+    "sort-packages": true,
     "allow-plugins": {
       "pestphp/pest-plugin": true
     }
