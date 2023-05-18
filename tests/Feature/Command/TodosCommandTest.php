@@ -1,6 +1,15 @@
 <?php
 
-test('default command "demo" is correctly loaded', function () {
+test('"todos" command is correctly loaded', function () {
+    $output = getOutput();
+
+    $app = getApp();
+    $app->runCommand(['minicli', 'todos']);
+
+    expect($output->fetch())->toContain('list all');
+});
+
+test('"todos list" is correctly loaded', function () {
     $output = getOutput();
 
     $app = getApp();

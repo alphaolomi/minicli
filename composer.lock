@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd32ca6cb35a8a80bcef70dfb8a0ab2a",
+    "content-hash": "f465bb3d50dd8e869a8a2bb23f701402",
     "packages": [
         {
             "name": "league/plates",
@@ -69,46 +69,6 @@
                 "source": "https://github.com/thephpleague/plates/tree/v3.5.0"
             },
             "time": "2023-01-16T20:25:45+00:00"
-        },
-        {
-            "name": "minicli/command-help",
-            "version": "0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/minicli/command-help.git",
-                "reference": "f8cbb80bad2aa2fc0896d1b8048e6098f0a18d87"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/minicli/command-help/zipball/f8cbb80bad2aa2fc0896d1b8048e6098f0a18d87",
-                "reference": "f8cbb80bad2aa2fc0896d1b8048e6098f0a18d87",
-                "shasum": ""
-            },
-            "require": {
-                "minicli/minicli": "^3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Command\\": "Command/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "A help command for Minicli",
-            "homepage": "https://github.com/minicli/command-help",
-            "keywords": [
-                "cli",
-                "command-line",
-                "minicli"
-            ],
-            "support": {
-                "issues": "https://github.com/minicli/command-help/issues",
-                "source": "https://github.com/minicli/command-help/tree/0.1"
-            },
-            "time": "2022-06-02T17:42:18+00:00"
         },
         {
             "name": "minicli/minicli",
@@ -3804,7 +3764,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,

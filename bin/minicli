@@ -6,17 +6,12 @@ if (php_sapi_name() !== 'cli') {
 }
 
 
-$root_app = dirname(__DIR__);
-
-if (!is_file($root_app . '/vendor/autoload.php')) {
-    $root_app = dirname(__DIR__, 4);
+if (file_exists(__DIR__ . '/../../../autoload.php')) {
+    require __DIR__ . '/../../../autoload.php';
+} else {
+    require __DIR__ . '/../vendor/autoload.php';
 }
 
-if (is_file($root_app . '/vendor/autoload.php')) {
-    require $root_app . '/vendor/autoload.php';
-}
-
-require __DIR__ . '/vendor/autoload.php';
 
 use App\Config\AppConfig;
 use App\Config\TermwindOutputHandler;
@@ -25,10 +20,11 @@ use App\Services\TermwindService;
 use Minicli\App;
 use Minicli\Exception\CommandNotFoundException;
 
+$appPath = dirname(__DIR__) . '/app/Command';
+
 $app = new App([
     'app_path' => [
-        __DIR__ . '/app/Command',
-        '@minicli/command-help'
+        $appPath,
     ],
     'debug' => false
 ]);
@@ -41,6 +37,7 @@ $app->addService('plates', new PlatesService());
 
 // Register Termwind Output Handler
 $app->setOutputHandler(new TermwindOutputHandler());
+
 
 /* Add configs using env vars and json files */
 try {

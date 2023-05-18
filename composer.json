@@ -2,26 +2,19 @@
   "name": "alphaolomi/minicli",
   "description": "Minicli Application Template powered with Termwind and Plates",
   "license": "MIT",
-  "type": "project",
+  "type": "library",
   "homepage": "https://alphaolomi.github.io/minicli/",
-  "keywords": ["cli","command-line", "template", "termwind", "plates", "minicli"],
+  "keywords": [ "cli", "command-line", "template", "termwind", "plates", "minicli" ],
   "authors": [
     {
-        "name": "Alpha Olomi",
-        "email": "hello@alphaolomi.com",
-        "role": "Developer"
+      "name": "Alpha Olomi",
+      "email": "hello@alphaolomi.com",
+      "role": "Developer"
     }
-],
-  "autoload": {
-    "psr-4": {
-      "App\\": "app/"
-    }
-  },
-  "bin" : ["minicli"],
+  ],  
   "require": {
     "php": "^8.1",
     "minicli/minicli": "^3.0",
-    "minicli/command-help": "^0.1.0",
     "nunomaduro/termwind": "^1.15",
     "league/plates": "^3.5"
   },
@@ -29,13 +22,23 @@
     "pestphp/pest": "^2.6",
     "laravel/pint": "^1.10"
   },
+  "bin": [
+    "bin/minicli"
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
   "scripts": {
-    "test" : ["pest"],
-    "lint" : ["pint"]
+    "test": [ "pest" ],
+    "lint": [ "pint" ]
   },
   "prefer-stable": true,
+  "minimum-stability": "dev",
   "config": {
     "sort-packages": true,
+    "bin-dir": "/usr/local/bin",
     "allow-plugins": {
       "pestphp/pest-plugin": true
     }
