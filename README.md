@@ -52,13 +52,13 @@ docker-compose exec app minicli your-custom-command
 #### Production
 ```bash
 # Build
-docker build -t yourname/myapp-minicli .
+docker build -t alphaolomi/minicli .
 
 # Run
-docker run --rm 
+docker run --rm alphaolomi/minicli demo
 
 # Tag
-docker tag yourname/myapp-minicli ghcr.io/yourname/myapp-minicli:latest
+docker tag alphaolomi/minicli ghcr.io/alphaolomi/minicli:latest
 
-yourname/myapp-minicli your-custom-command
+alphaolomi/minicli demo
 ```

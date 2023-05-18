@@ -1,32 +1,31 @@
-FROM php:8-fpm
+FROM php:8.2-cli-alpine
+
+# Metadata
+LABEL maintainer="Alpha Olomi <hello@alphaolomi.com>"
+LABEL description="Minicli template app Docker image"
+
 
 ARG user=sammy
 ARG uid=1000
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y \
+RUN apk add --no-cache \
     git \
     curl \
-    vim  \
-    libpng-dev \
-    libonig-dev \
     libxml2-dev \
     zip \
-    unzip
+    unzip \
+    bash
 
-# Clear cache
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-
-# Install PHP extensions
-RUN docker-php-ext-install mbstring exif gd
-
-# Get latest Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+# Install a specific version of Composer
+COPY --from=composer:2.1 /usr/bin/composer /usr/bin/composer
 
 # Create system user to run Composer and Artisan Commands
-RUN useradd -G www-data,root -u $uid -d /home/$user $user
+RUN addgroup -g $uid -S $user && \
+    adduser -u $uid -S $user -G $user
 RUN mkdir -p /home/$user/.composer && \
     chown -R $user:$user /home/$user
+
 
 WORKDIR /home/$user
 
@@ -36,4 +35,7 @@ RUN chmod +x /home/$user/runner.sh
 
 USER $user
 
-ENTRYPOINT ["/home/sammy/runner.sh"]
+# Install dependencies
+RUN composer install --optimize-autoloader --no-dev
+
+ENTRYPOINT ["sh", "/home/sammy/runner.sh"]
