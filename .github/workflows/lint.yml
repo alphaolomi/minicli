@@ -2,8 +2,11 @@ name: Lint and Fix PHP code style
 
 on:
   push:
-    paths:
-      - '**.php'
+    branches: [ main ]
+    paths: ['**.php']
+  pull_request:
+    branches: [ main ]
+    paths: ['**.php']
 
 permissions:
   contents: write
@@ -24,4 +27,4 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[style] Fix PHP code style issues"
+          commit_message: "style(auto-lint): Fix PHP code style issues"
