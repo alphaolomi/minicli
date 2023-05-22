@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f465bb3d50dd8e869a8a2bb23f701402",
+    "content-hash": "3bd63ebbcd46061c67b1fcc6fc848aa7",
     "packages": [
         {
             "name": "league/plates",
@@ -72,26 +72,27 @@
         },
         {
             "name": "minicli/minicli",
-            "version": "3.2.1",
+            "version": "4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/minicli/minicli.git",
-                "reference": "2d31b303461d0ec1f8c6d0be00f8b26be8766fbe"
+                "reference": "2922ad8a07b66616b28f28aa1a3a39b7c626408c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minicli/minicli/zipball/2d31b303461d0ec1f8c6d0be00f8b26be8766fbe",
-                "reference": "2d31b303461d0ec1f8c6d0be00f8b26be8766fbe",
+                "url": "https://api.github.com/repos/minicli/minicli/zipball/2922ad8a07b66616b28f28aa1a3a39b7c626408c",
+                "reference": "2922ad8a07b66616b28f28aa1a3a39b7c626408c",
                 "shasum": ""
             },
             "require": {
                 "ext-readline": "*",
-                "php": ">=8"
+                "php": ">=8.1"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.5",
-                "pestphp/pest": "^1.0",
-                "phpunit/phpunit": "^9.0"
+                "mockery/mockery": "^1.5",
+                "pestphp/pest": "^2.5",
+                "phpstan/phpstan": "^1.10"
             },
             "type": "library",
             "autoload": {
@@ -111,7 +112,7 @@
             ],
             "support": {
                 "issues": "https://github.com/minicli/minicli/issues",
-                "source": "https://github.com/minicli/minicli/tree/3.2.1"
+                "source": "https://github.com/minicli/minicli/tree/4.0.2"
             },
             "funding": [
                 {
@@ -119,7 +120,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-09-23T09:04:22+00:00"
+            "time": "2023-05-18T09:57:29+00:00"
         },
         {
             "name": "nunomaduro/termwind",
