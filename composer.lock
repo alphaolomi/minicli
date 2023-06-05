@@ -72,16 +72,16 @@
         },
         {
             "name": "minicli/minicli",
-            "version": "4.0.2",
+            "version": "4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/minicli/minicli.git",
-                "reference": "2922ad8a07b66616b28f28aa1a3a39b7c626408c"
+                "reference": "7ccff45d4311e31a2fba896dfe70d4d2c6671aab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minicli/minicli/zipball/2922ad8a07b66616b28f28aa1a3a39b7c626408c",
-                "reference": "2922ad8a07b66616b28f28aa1a3a39b7c626408c",
+                "url": "https://api.github.com/repos/minicli/minicli/zipball/7ccff45d4311e31a2fba896dfe70d4d2c6671aab",
+                "reference": "7ccff45d4311e31a2fba896dfe70d4d2c6671aab",
                 "shasum": ""
             },
             "require": {
@@ -89,7 +89,7 @@
                 "php": ">=8.1"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.5",
+                "laravel/pint": "^1.10",
                 "mockery/mockery": "^1.5",
                 "pestphp/pest": "^2.5",
                 "phpstan/phpstan": "^1.10"
@@ -112,7 +112,7 @@
             ],
             "support": {
                 "issues": "https://github.com/minicli/minicli/issues",
-                "source": "https://github.com/minicli/minicli/tree/4.0.2"
+                "source": "https://github.com/minicli/minicli/tree/4.0.3"
             },
             "funding": [
                 {
@@ -120,7 +120,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-05-18T09:57:29+00:00"
+            "time": "2023-05-20T22:04:58+00:00"
         },
         {
             "name": "nunomaduro/termwind",
