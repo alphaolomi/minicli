@@ -72,16 +72,16 @@
         },
         {
             "name": "minicli/minicli",
-            "version": "4.0.6",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/minicli/minicli.git",
-                "reference": "9879a221df2226df49fa7faacdffc64022dd4070"
+                "reference": "07718a97a32bdd5e104cd3e1dbb3eb10f620692b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minicli/minicli/zipball/9879a221df2226df49fa7faacdffc64022dd4070",
-                "reference": "9879a221df2226df49fa7faacdffc64022dd4070",
+                "url": "https://api.github.com/repos/minicli/minicli/zipball/07718a97a32bdd5e104cd3e1dbb3eb10f620692b",
+                "reference": "07718a97a32bdd5e104cd3e1dbb3eb10f620692b",
                 "shasum": ""
             },
             "require": {
@@ -115,7 +115,7 @@
             ],
             "support": {
                 "issues": "https://github.com/minicli/minicli/issues",
-                "source": "https://github.com/minicli/minicli/tree/4.0.6"
+                "source": "https://github.com/minicli/minicli/tree/4.1.0"
             },
             "funding": [
                 {
@@ -123,7 +123,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-06-08T20:27:51+00:00"
+            "time": "2023-06-13T09:00:02+00:00"
         },
         {
             "name": "nunomaduro/termwind",
