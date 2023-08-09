@@ -1,6 +1,8 @@
 <?php
 
-test('default command "demo" is correctly loaded', function () {
+declare(strict_types=1);
+
+test('default command "demo" is correctly loaded', function (): void {
     $output = getOutput();
 
     $app = getApp();
@@ -9,43 +11,20 @@ test('default command "demo" is correctly loaded', function () {
     expect($output->fetch())->toContain('help');
 });
 
-test('the "demo color" command echoes command parameters', function () {
+test('the "demo test" command echoes command parameters', function (): void {
     $output = getOutput();
 
     $app = getApp();
-    $app->runCommand(['minicli', 'demo', 'color']);
+    $app->runCommand(['minicli', 'demo', 'test', 'user=erika']);
 
-    expect($output->fetch())->toBeString();
+    expect($output->fetch())->toContain('Hello, erika');
 });
 
-
-test('the "demo ask" command echoes command parameters', function () {
-    $output = getOutput();
-
-    $app = getApp();
-    $app->runCommand(['minicli', 'demo', 'ask']);
-
-    expect($output->fetch())->toBeString();
-})->skip('Don\'t know how to test this yet.');
-
-
-// What is your name?
-
-test('the "demo table" command prints test table', function () {
+test('the "demo table" command prints test table', function (): void {
     $output = getOutput();
 
     $app = getApp();
     $app->runCommand(['minicli', 'demo', 'table']);
 
     expect($output->fetch())->toContain('Header 3');
-});
-
-
-test('the "demo hello" command prints test table', function () {
-    $output = getOutput();
-
-    $app = getApp();
-    $app->runCommand(['minicli', 'demo', 'hello']);
-
-    expect($output->fetch())->toContain('Hello');
 });

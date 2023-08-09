@@ -1,8 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Command;
 
-use Closure;
 use Minicli\Command\CommandController;
 use Symfony\Component\Console\Output\OutputInterface;
 use Termwind\Terminal;

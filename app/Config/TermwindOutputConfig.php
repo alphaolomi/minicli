@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Config;
 
 class TermwindOutputConfig
@@ -27,7 +29,7 @@ class TermwindOutputConfig
 
     public function enableLabels(): bool
     {
-        return true;
+        return false;
     }
 
     public function stylesWithLabels(): array

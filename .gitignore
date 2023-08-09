@@ -2,4 +2,4 @@
 .phpunit.result.cache
 .composer/
 vendor/
-logs/
+composer.lock
