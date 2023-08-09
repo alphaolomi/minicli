@@ -8,6 +8,7 @@ use Minicli\Command\CommandController;
 use Symfony\Component\Console\Output\OutputInterface;
 use Termwind\Terminal;
 use Termwind\ValueObjects\Style;
+use Closure;
 
 abstract class BaseController extends CommandController
 {

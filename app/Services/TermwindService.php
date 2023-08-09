@@ -11,6 +11,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Termwind\Terminal;
 use Termwind\ValueObjects\Style;
 
+use Closure;
+
 use function Termwind\ask;
 
 use function Termwind\render;
